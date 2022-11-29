@@ -1,0 +1,207 @@
+{
+  "routing": [
+    {
+      "path": [
+        0,
+        1
+      ],
+      "from": 0,
+      "to": 1
+    },
+    {
+      "path": [
+        0,
+        2
+      ],
+      "from": 0,
+      "to": 2
+    },
+    {
+      "path": [
+        0,
+        3
+      ],
+      "from": 0,
+      "to": 3
+    },
+    {
+      "path": [
+        1,
+        0
+      ],
+      "from": 1,
+      "to": 0
+    },
+    {
+      "path": [
+        1,
+		0,
+        2
+      ],
+      "from": 1,
+      "to": 2
+    },
+    {
+      "path": [
+        1,
+		0,
+        3
+      ],
+      "from": 1,
+      "to": 3
+    },
+    {
+      "path": [
+        2,
+        0
+      ],
+      "from": 2,
+      "to": 0
+    },
+    {
+      "path": [
+        2,
+		0,
+        1
+      ],
+      "from": 2,
+      "to": 1
+    },
+    {
+      "path": [
+        2,
+        0,
+        3
+      ],
+      "from": 2,
+      "to": 3
+    },
+    {
+      "path": [
+        3,
+        0
+      ],
+      "from": 3,
+      "to": 0
+    },
+    {
+      "path": [
+        3,
+        0,
+        1
+      ],
+      "from": 3,
+      "to": 1
+    },
+    {
+      "path": [
+        3,
+        0,
+        2
+      ],
+      "from": 3,
+      "to": 2
+    }
+  ],
+  "nodes": [
+    {
+      "loadLimit": 0.8,
+      "name": "DisplayNode"
+    },
+    {
+      "loadLimit": 0.8,
+      "name": "CameraNode1"
+    },
+    {
+      "loadLimit": 0.8,
+      "name": "CameraNode2"
+    },
+    {
+      "loadLimit": 0.8,
+      "name": "CameraNode3"
+    }
+  ],
+  "links": [
+    {
+      "bandwidth": 100,
+      "from": 0,
+      "to": 1
+    },
+    {
+      "bandwidth": 100,
+      "from": 0,
+      "to": 2
+    },
+    {
+      "bandwidth": 100,
+      "from": 3,
+      "to": 0
+    }
+  ],
+  "tasks": [
+    {
+      "period": 1,
+      "connectivity": [],
+      "appropriateNodes": [
+        0
+      ],
+      "name": "DisplayTask",
+      "wcet": [
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "messageSize": 0
+    },
+    {
+      "period": 1,
+      "connectivity": [0],
+      "appropriateNodes": [
+        1
+      ],
+      "name": "CaptureImage1",
+      "wcet": [
+        0.9,
+        0.9,
+        0.9,
+        0.9
+      ],
+      "messageSize": 1548
+    },
+    {
+      "period": 1,
+      "connectivity": [
+        0
+      ],
+      "appropriateNodes": [
+        2
+      ],
+      "name": "CaptureImage2",
+      "wcet": [
+        0.9,
+        0.9,
+        0.9,
+        0.9
+      ],
+      "messageSize": 1548
+    },
+    {
+      "period": 1,
+      "connectivity": [
+        0
+      ],
+      "appropriateNodes": [
+        3
+      ],
+      "name": "CaptureImage3",
+      "wcet": [
+        0.9,
+        0.9,
+        0.9,
+        0.9
+      ],
+      "messageSize": 1548
+    }
+  ]
+}

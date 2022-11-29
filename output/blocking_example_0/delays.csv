@@ -1,0 +1,13 @@
+SenderNodeId,SenderName,DestinatioNodeId,DestinationName,PathLength,Configuration,MessageSize,SentTime,ReceptionTime,TransmissionDuration,TaskId,TaskName
+1,CameraNode1,0,DisplayNode,2,0,1548,0.9,0.900124,0.000124,1,CaptureImage1
+2,CameraNode2,0,DisplayNode,2,0,1548,0.9,0.900248,0.00024784,2,CaptureImage2
+3,CameraNode3,0,DisplayNode,2,0,1548,0.9,0.900372,0.00037168,3,CaptureImage3
+1,CameraNode1,0,DisplayNode,2,0,1548,1.9,1.90012,0.000124,1,CaptureImage1
+2,CameraNode2,0,DisplayNode,2,0,1548,1.9,1.90025,0.00024784,2,CaptureImage2
+3,CameraNode3,0,DisplayNode,2,0,1548,1.9,1.90037,0.00037168,3,CaptureImage3
+1,CameraNode1,0,DisplayNode,2,0,1548,2.9,2.90012,0.000124,1,CaptureImage1
+2,CameraNode2,0,DisplayNode,2,0,1548,2.9,2.90025,0.00024784,2,CaptureImage2
+3,CameraNode3,0,DisplayNode,2,0,1548,2.9,2.90037,0.00037168,3,CaptureImage3
+1,CameraNode1,0,DisplayNode,2,0,1548,3.9,3.90012,0.000124,1,CaptureImage1
+2,CameraNode2,0,DisplayNode,2,0,1548,3.9,3.90025,0.00024784,2,CaptureImage2
+3,CameraNode3,0,DisplayNode,2,0,1548,3.9,3.90037,0.00037168,3,CaptureImage3

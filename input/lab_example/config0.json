@@ -1,0 +1,224 @@
+{
+  "routing": [
+    {
+      "path": [
+        0,
+        1
+      ],
+      "from": 0,
+      "to": 1
+    },
+    {
+      "path": [
+        0,
+        2
+      ],
+      "from": 0,
+      "to": 2
+    },
+    {
+      "path": [
+        0,
+        3
+      ],
+      "from": 0,
+      "to": 3
+    },
+    {
+      "path": [
+        1,
+        0
+      ],
+      "from": 1,
+      "to": 0
+    },
+    {
+      "path": [
+        1,
+        2
+      ],
+      "from": 1,
+      "to": 2
+    },
+    {
+      "path": [
+        1,
+        3
+      ],
+      "from": 1,
+      "to": 3
+    },
+    {
+      "path": [
+        2,
+        0
+      ],
+      "from": 2,
+      "to": 0
+    },
+    {
+      "path": [
+        2,
+        1
+      ],
+      "from": 2,
+      "to": 1
+    },
+    {
+      "path": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "from": 2,
+      "to": 3
+    },
+    {
+      "path": [
+        3,
+        2,
+        0
+      ],
+      "from": 3,
+      "to": 0
+    },
+    {
+      "path": [
+        3,
+        2,
+        0,
+        1
+      ],
+      "from": 3,
+      "to": 1
+    },
+    {
+      "path": [
+        3,
+        1,
+        2
+      ],
+      "from": 3,
+      "to": 2
+    }
+  ],
+  "nodes": [
+    {
+      "loadLimit": 0.8,
+      "name": "Node1"
+    },
+    {
+      "loadLimit": 0.8,
+      "name": "Node2"
+    },
+    {
+      "loadLimit": 0.8,
+      "name": "Node3"
+    },
+    {
+      "loadLimit": 0.8,
+      "name": "Desktop"
+    }
+  ],
+  "links": [
+    {
+      "bandwidth": 100,
+      "from": 0,
+      "to": 1
+    },
+    {
+      "bandwidth": 100,
+      "from": 1,
+      "to": 2
+    },
+    {
+      "bandwidth": 100,
+      "from": 3,
+      "to": 0
+    },
+    {
+      "bandwidth": 100,
+      "from": 1,
+      "to": 3
+    },
+    {
+      "bandwidth": 100,
+      "from": 0,
+      "to": 2
+    },
+    {
+      "bandwidth": 100,
+      "from": 2,
+      "to": 3
+    }
+  ],
+  "tasks": [
+    {
+      "period": 1,
+      "connectivity": [
+        1
+      ],
+      "appropriateNodes": [
+        1
+      ],
+      "name": "MultiplyTask",
+      "wcet": [
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "messageSize": 4
+    },
+    {
+      "period": 1,
+      "connectivity": [],
+      "appropriateNodes": [
+        2
+      ],
+      "name": "DisplayTask",
+      "wcet": [
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "messageSize": 0
+    },
+    {
+      "period": 1,
+      "connectivity": [
+        0
+      ],
+      "appropriateNodes": [
+        1
+      ],
+      "name": "AddOneTask",
+      "wcet": [
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "messageSize": 4
+    },
+    {
+      "period": 1,
+      "connectivity": [
+        2
+      ],
+      "appropriateNodes": [
+        2
+      ],
+      "name": "NumGenTask",
+      "wcet": [
+        0.1,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "messageSize": 4
+    }
+  ]
+}

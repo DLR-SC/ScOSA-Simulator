@@ -1,0 +1,497 @@
+{
+  "routing": [
+    {
+      "path": [
+        0,
+        1
+      ],
+      "from": 0,
+      "to": 1
+    },
+    {
+      "path": [
+        0,
+        3,
+        1,
+        2
+      ],
+      "from": 0,
+      "to": 2
+    },
+    {
+      "path": [
+        0,
+        4,
+        3
+      ],
+      "from": 0,
+      "to": 3
+    },
+    {
+      "path": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "from": 0,
+      "to": 4
+    },
+    {
+      "path": [
+        1,
+        3,
+        4,
+        0
+      ],
+      "from": 1,
+      "to": 0
+    },
+    {
+      "path": [
+        1,
+        0,
+        3,
+        4,
+        2
+      ],
+      "from": 1,
+      "to": 2
+    },
+    {
+      "path": [
+        1,
+        0,
+        4,
+        3
+      ],
+      "from": 1,
+      "to": 3
+    },
+    {
+      "path": [
+        1,
+        4
+      ],
+      "from": 1,
+      "to": 4
+    },
+    {
+      "path": [
+        2,
+        1,
+        3,
+        0
+      ],
+      "from": 2,
+      "to": 0
+    },
+    {
+      "path": [
+        2,
+        1
+      ],
+      "from": 2,
+      "to": 1
+    },
+    {
+      "path": [
+        2,
+        1,
+        3
+      ],
+      "from": 2,
+      "to": 3
+    },
+    {
+      "path": [
+        2,
+        1,
+        4
+      ],
+      "from": 2,
+      "to": 4
+    },
+    {
+      "path": [
+        3,
+        4,
+        0
+      ],
+      "from": 3,
+      "to": 0
+    },
+    {
+      "path": [
+        3,
+        4,
+        1
+      ],
+      "from": 3,
+      "to": 1
+    },
+    {
+      "path": [
+        3,
+        1,
+        2
+      ],
+      "from": 3,
+      "to": 2
+    },
+    {
+      "path": [
+        3,
+        4
+      ],
+      "from": 3,
+      "to": 4
+    },
+    {
+      "path": [
+        4,
+        2,
+        1,
+        0
+      ],
+      "from": 4,
+      "to": 0
+    },
+    {
+      "path": [
+        4,
+        1
+      ],
+      "from": 4,
+      "to": 1
+    },
+    {
+      "path": [
+        4,
+        0,
+        3,
+        1,
+        2
+      ],
+      "from": 4,
+      "to": 2
+    },
+    {
+      "path": [
+        4,
+        3
+      ],
+      "from": 4,
+      "to": 3
+    }
+  ],
+  "nodes": [
+    {
+      "role": "MASTER",
+      "loadLimit": 0.8,
+      "name": "A"
+    },
+    {
+      "role": "OBSERVER_1",
+      "loadLimit": 0.8,
+      "name": "B"
+    },
+    {
+      "role": "OBSERVER_2",
+      "loadLimit": 0.8,
+      "name": "C"
+    },
+    {
+      "role": "WORKER",
+      "loadLimit": 0.8,
+      "name": "D"
+    },
+    {
+      "role": "WORKER",
+      "loadLimit": 0.8,
+      "name": "E"
+    }
+  ],
+  "links": [
+    {
+      "bandwidth": 10000,
+      "from": 4,
+      "to": 0
+    },
+    {
+      "bandwidth": 14000,
+      "from": 1,
+      "to": 3
+    },
+    {
+      "bandwidth": 10000,
+      "from": 4,
+      "to": 3
+    },
+    {
+      "bandwidth": 10000,
+      "from": 4,
+      "to": 1
+    },
+    {
+      "bandwidth": 10000,
+      "from": 4,
+      "to": 2
+    },
+    {
+      "bandwidth": 14000,
+      "from": 0,
+      "to": 1
+    },
+    {
+      "bandwidth": 14000,
+      "from": 0,
+      "to": 3
+    },
+    {
+      "bandwidth": 14000,
+      "from": 1,
+      "to": 2
+    }
+  ],
+  "tasks": [
+    {
+      "period": 10,
+      "connectivity": [
+        5,
+        2
+      ],
+      "appropriateNodes": [
+        3
+      ],
+      "name": "iMU",
+      "wcet": [
+        0.005,
+        0.005,
+        0.005,
+        0.01,
+        0.01
+      ],
+      "messageSize": 184
+    },
+    {
+      "period": 800,
+      "connectivity": [
+        5
+      ],
+      "appropriateNodes": [
+        0
+      ],
+      "name": "lISCraterNavigation1",
+      "wcet": [
+        348,
+        348,
+        348,
+        696,
+        696
+      ],
+      "messageSize": 104
+    },
+    {
+      "period": 10,
+      "connectivity": [
+        5
+      ],
+      "appropriateNodes": [
+        4
+      ],
+      "name": "strEmulation",
+      "wcet": [
+        0.05,
+        0.05,
+        0.05,
+        0.1,
+        0.1
+      ],
+      "messageSize": 60
+    },
+    {
+      "period": 200,
+      "connectivity": [
+        9
+      ],
+      "appropriateNodes": [
+        3
+      ],
+      "name": "rectifyImage2",
+      "wcet": [
+        26,
+        26,
+        26,
+        52,
+        52
+      ],
+      "messageSize": 1048600
+    },
+    {
+      "period": 80,
+      "connectivity": [
+        5,
+        8,
+        11
+      ],
+      "appropriateNodes": [
+        3
+      ],
+      "name": "altimeter",
+      "wcet": [
+        0.005,
+        0.005,
+        0.005,
+        0.01,
+        0.01
+      ],
+      "messageSize": 8
+    },
+    {
+      "period": 10,
+      "connectivity": [
+        9,
+        10,
+        11
+      ],
+      "appropriateNodes": [
+        4
+      ],
+      "name": "navigationFilter",
+      "wcet": [
+        2,
+        2,
+        2,
+        1,
+        1
+      ],
+      "messageSize": 305
+    },
+    {
+      "period": 200,
+      "connectivity": [
+        1
+      ],
+      "appropriateNodes": [
+        4
+      ],
+      "name": "rectifyImage1",
+      "wcet": [
+        26,
+        26,
+        26,
+        52,
+        52
+      ],
+      "messageSize": 1048600
+    },
+    {
+      "period": 50,
+      "connectivity": [
+        3
+      ],
+      "appropriateNodes": [
+        3
+      ],
+      "name": "camera2",
+      "wcet": [
+        0.005,
+        0.005,
+        0.005,
+        0.01,
+        0.01
+      ],
+      "messageSize": 1048600
+    },
+    {
+      "period": 10,
+      "connectivity": [
+        5
+      ],
+      "appropriateNodes": [
+        4
+      ],
+      "name": "featureTracker",
+      "wcet": [
+        0.005,
+        0.005,
+        0.005,
+        0.01,
+        0.01
+      ],
+      "messageSize": 9704
+    },
+    {
+      "period": 800,
+      "connectivity": [
+        5
+      ],
+      "appropriateNodes": [
+        1
+      ],
+      "name": "lISCraterNavigation2",
+      "wcet": [
+        348,
+        348,
+        348,
+        696,
+        696
+      ],
+      "messageSize": 104
+    },
+    {
+      "period": 10,
+      "connectivity": [
+        11
+      ],
+      "appropriateNodes": [
+        2
+      ],
+      "name": "superARTIS",
+      "wcet": [
+        1,
+        1,
+        1,
+        2,
+        2
+      ],
+      "messageSize": 1
+    },
+    {
+      "period": 10,
+      "connectivity": [],
+      "appropriateNodes": [
+        4
+      ],
+      "name": "stateEvaluation",
+      "wcet": [
+        0.1,
+        0.1,
+        0.1,
+        0.2,
+        0.2
+      ],
+      "messageSize": 0
+    },
+    {
+      "period": 50,
+      "connectivity": [
+        6,
+        8
+      ],
+      "appropriateNodes": [
+        4
+      ],
+      "name": "camera1",
+      "wcet": [
+        0.005,
+        0.005,
+        0.005,
+        0.01,
+        0.01
+      ],
+      "messageSize": 1048600
+    }
+  ]
+}
